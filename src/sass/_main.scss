@@ -1,0 +1,40 @@
+.section-position {
+  margin-top: -70px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.picture__body{
+width: 180px;
+height: 227px;
+border-radius: 50px 0px 50px 0px;
+}
+
+.picture___title {
+    margin-top: -1px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+    text-align: center;
+    color: var(--secondary-text-color);    
+}
+
+.picture____text{
+    margin-top: -10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: center;
+    color: var(--primary-part-color);
+    
+}
+
+.picture_____text-two{
+margin-top: -10px;
+font-size: 14px;
+font-weight: 600;
+line-height: 17.07px;
+text-align: center;
+color: var(--primary-part-color);
+}
