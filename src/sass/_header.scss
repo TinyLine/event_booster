@@ -1,13 +1,46 @@
+.logo_style{
+  width: 300px;
+  height: 300px;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(136deg, #c4c4c408 10.75%, #c4c4c400 92.33%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 477px;
+}
+
+.symbol___style{
+  width: 30px;
+  height: 30px;
+}
+
+.svg__symbol__section{
+    margin-top: -165px;
+    margin-bottom: 5px;
+    position: absolute;
+    fill: white;
+  
+}
+
+.svg__symbol__section-two{
+  position: absolute;
+  margin-top: -120px;
+  display: flex;
+  fill: white;
+}
+
+
 .title{
 color: var(--secondary-text-color);
 margin-left: auto;
 margin-right: auto;
 font-size: 50px;
-font-weight: 800;
+font-weight: 900;
 line-height: 60.95px;
 text-align: center;
 font-family: 'Montserrat', sans-serif;
 max-width: 600px;
+margin-top: -70px;
 }
 
 input::placeholder {
@@ -15,15 +48,14 @@ color: var(--secondary-input-color);
 font-size: 16px;
 font-weight: 400;
 line-height: 19.5px;
-padding-left: 20px;
+padding-left: 30px;
+
 }
 
 .search{
   border: none;
-  width: 270px;
-  height: 40px;
-  top: 214px;
-  left: 355px;
+  width: 295px;
+  height: 45px;
   border-radius: 20px 20px 20px 20px;
   background-color: var(--primary-text-color);
 }
@@ -31,14 +63,32 @@ padding-left: 20px;
 .input_place{
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
+  margin-top: -80px;
 }
 
 .hero {
-  background-image: linear-gradient(to left, rgba(12, 12, 12, 0.4), rgba(7, 7, 8, 0.4)), url(../images/music-picture.jpg); 
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/music-picture.jpg); 
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 300px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.search_icon {
+  width: 15px;
+  fill: #939393;
+  margin-left: 576px;
+  position: absolute;
+  margin-top: 20.90px;
+}
+
+
+.search_icon-two {
+  width: 15px;
+  fill: #939393;
+  position: absolute;
+  margin-top: 20.90px;
+  margin-left: 886px;
 }
