@@ -57,7 +57,8 @@ padding-left: 30px;
   width: 295px;
   height: 45px;
   border-radius: 20px 20px 20px 20px;
-  background-color: var(--primary-text-color);
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(10px);
 }
 
 .input_place{
@@ -70,7 +71,7 @@ padding-left: 30px;
 .hero {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/music-picture.jpg); 
   padding-top: 200px;
-  padding-bottom: 300px;
+  padding-bottom: 340px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -78,15 +79,17 @@ padding-left: 30px;
 }
 
 .search_icon {
+  z-index: 1;
   width: 15px;
   fill: #939393;
   margin-top: -53px;
-    margin-left: -98px;
-    position: absolute;
+  margin-left: -98px;
+  position: absolute;
 }
 
 
 .search_icon-two {
+  z-index: 1;
   width: 15px;
   fill: #939393;
   position: absolute;
