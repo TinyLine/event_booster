@@ -1,4 +1,4 @@
-.button-form{
+.button-form {
     width: 185px;
     height: 40px;
     border-radius: 17px;
@@ -17,7 +17,7 @@
 
 .modal-backdrop {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,18 +26,16 @@
     backdrop-filter: blur(1.5px);
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Высокий z-index, чтобы перекрывать все элементы */
+    z-index: 1000; 
 }
 
 .modal {
     width: 930px;
     height: 863px;
-    flex-shrink: 0;
     border-radius: 300px 0px;
     background: #FFF2FD;
     padding: 20px;
     position: absolute;
-    overflow-y: auto; /* Добавляем прокрутку для случая, если контент не помещается */
 }
 
 .modal-close-btn {
@@ -54,42 +52,68 @@
     display: flex;
 }
 
-.img-modal-title{
+.img-modal-title {
     margin-left: 393px;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
-.img-modal{
+.img-modal {
     height: 600px;
-    margin-top: 210px;
+    margin-top: 189px;
     margin-left: -500px;
     position: absolute;
     
 }
 
-.title_modal{
+.title_modal {
     margin-left: 450px;
     margin-bottom: 14px;
     margin-top: 15px;
     color: #DC56C5;
     font-size: 24px;
     font-weight: 600;
-    line-height: normal;
 }
 
-.text__modal{
+.text__modal {
     margin-left: 450px;
     margin-top: -8px;
     width: 374px;
     color: #0E0E0E;
     font-size: 18px;
     font-weight: 400;
-    line-height: normal;
 }
 
-.modal-close-btn{
+.modal-close-btn {
     width: 25px;
     height: 25px;
     color: #4C00FE;
+}
+
+.button___form {
+    margin-left: 450px;
+    margin-bottom: 50px;
+    width: 145px;
+    height: 40px;
+    border-radius: 5px;
+    background: #4C00FE;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.button____modal {
+    position: absolute;
+    width: 255px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #4C00FE;
+    color: #4C00FE;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 80px;
+    margin-left: -300px;
+    cursor: pointer;
 }
