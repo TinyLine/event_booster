@@ -1,24 +1,61 @@
 .logo_style{
-  width: 300px;
-  height: 300px;
   backdrop-filter: blur(15px);
   background: linear-gradient(136deg, #c4c4c408 10.75%, #c4c4c400 92.33%);
   position: absolute;
   top: 0;
   left: 0;
   border-bottom-right-radius: 477px;
+
+  @media screen and (min-width: 320px) {
+    width: 180px;
+    height: 174px;
+
+  }
+
+  @media screen and (min-width: 768px) {
+      
+  }
+    
+  @media screen and (min-width: 1280px) {
+      width: 300px;
+      height: 300px;
+  }
 }
 
 .symbol___style{
-  width: 30px;
-  height: 30px;
+  @media screen and (min-width: 320px) {
+    width: 15px;
+    height: 15px;
+   
+  }
+
+  @media screen and (min-width: 768px) {
+      
+  }
+    
+  @media screen and (min-width: 1280px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .svg__symbol__section{
-    margin-top: -165px;
     margin-bottom: 5px;
     position: absolute;
     fill: white;
+
+    @media screen and (min-width: 320px) {
+      margin-top: -146px;
+   
+     }
+   
+     @media screen and (min-width: 768px) {
+         
+     }
+       
+     @media screen and (min-width: 1280px) {
+      margin-top: -165px;
+     }
   
 }
 
@@ -27,6 +64,19 @@
   margin-top: -120px;
   display: flex;
   fill: white;
+
+  @media screen and (min-width: 320px) {
+    
+ 
+   }
+ 
+   @media screen and (min-width: 768px) {
+       
+   }
+     
+   @media screen and (min-width: 1280px) {
+       
+   }
 }
 
 
@@ -34,13 +84,27 @@
 color: var(--secondary-text-color);
 margin-left: auto;
 margin-right: auto;
-font-size: 50px;
 font-weight: 900;
-line-height: 60.95px;
 text-align: center;
 max-width: 600px;
-margin-top: -70px;
+
+
+@media screen and (min-width: 320px) {
+font-size: 18px;
+
 }
+
+@media screen and (min-width: 768px) {
+  
+}
+
+@media screen and (min-width: 1280px) {
+  font-size: 50px;
+  line-height: 60.95px;
+  margin-top: -70px;
+}
+}
+
 
 input::placeholder {
 color: var(--secondary-input-color);
@@ -69,13 +133,30 @@ padding-left: 30px;
 
 .hero {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/music-picture.jpg); 
-  padding-top: 200px;
-  padding-bottom: 340px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding-left: 27px;
+
+    @media screen and (min-width: 320px) {
+    padding-top: 180px;
+    padding-bottom: 430px;
+    margin-top: -280px;
+      
+      }
+      
+      @media screen and (min-width: 768px) {
+        
+      }
+      
+      @media screen and (min-width: 1280px) {
+        padding-top: 200px;
+        padding-bottom: 340px;
+        margin-top: auto;
+      }
+
 }
+
 
 .search_icon {
   z-index: 1;
