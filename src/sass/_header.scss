@@ -7,8 +7,8 @@
   border-bottom-right-radius: 477px;
 
   @media screen and (min-width: 320px) {
-    width: 180px;
-    height: 174px;
+    width: 100px;
+    height: 80px;
 
   }
 
@@ -24,8 +24,8 @@
 
 .symbol___style{
   @media screen and (min-width: 320px) {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
    
   }
 
@@ -45,7 +45,8 @@
     fill: white;
 
     @media screen and (min-width: 320px) {
-      margin-top: -146px;
+      margin-top: 105px;
+      margin-left: -20px;
    
      }
    
@@ -55,18 +56,19 @@
        
      @media screen and (min-width: 1280px) {
       margin-top: -165px;
+      margin-left: auto;
      }
   
 }
 
 .svg__symbol__section-two{
   position: absolute;
-  margin-top: -120px;
   display: flex;
   fill: white;
 
   @media screen and (min-width: 320px) {
-    
+    margin-top: 125px;
+    margin-left: -20px;
  
    }
  
@@ -75,14 +77,14 @@
    }
      
    @media screen and (min-width: 1280px) {
-       
+    margin-top: -120px;
+    margin-left: auto;
    }
 }
 
 
 .title{
 color: var(--secondary-text-color);
-margin-left: auto;
 margin-right: auto;
 font-weight: 900;
 text-align: center;
@@ -91,7 +93,8 @@ max-width: 600px;
 
 @media screen and (min-width: 320px) {
 font-size: 18px;
-
+margin-top: 165px;
+margin-left: -9px;
 }
 
 @media screen and (min-width: 768px) {
@@ -102,6 +105,7 @@ font-size: 18px;
   font-size: 50px;
   line-height: 60.95px;
   margin-top: -70px;
+  margin-left: auto;
 }
 }
 
@@ -117,18 +121,47 @@ padding-left: 30px;
 
 .search{
   border: none;
-  width: 295px;
-  height: 45px;
   border-radius: 20px 20px 20px 20px;
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(10px);
+
+  @media screen and (min-width: 320px) {
+    width: 270px;
+    height: 40px;
+    margin-top: 25px;
+      margin-left: -10px;
+      }
+      
+      @media screen and (min-width: 768px) {
+        
+      }
+      
+      @media screen and (min-width: 1280px) {
+        width: 295px;
+        height: 45px;
+        margin-top: unset;
+        margin-left: unset;
+
+      }
 }
 
 .input_place{
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 105px;
+  @media screen and (min-width: 320px) {
+      position: absolute;
+
+      }
+      
+      @media screen and (min-width: 768px) {
+        
+      }
+      
+      @media screen and (min-width: 1280px) {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 105px;
+        position: static;
+      }
 }
 
 .hero {
@@ -160,19 +193,49 @@ padding-left: 30px;
 
 .search_icon {
   z-index: 1;
-  width: 15px;
   fill: #939393;
   margin-top: -53px;
   margin-left: -98px;
   position: absolute;
+
+  @media screen and (min-width: 320px) {
+    margin-top: -30px;
+    margin-left: 220px;
+    width: 12px;
+      
+      }
+      
+      @media screen and (min-width: 768px) {
+        
+      }
+      
+      @media screen and (min-width: 1280px) {
+        margin-top: -53px;
+        margin-left: -98px;
+        width: 15px;
+      }
 }
 
 
 .search_icon-two {
   z-index: 1;
-  width: 15px;
   fill: #939393;
   position: absolute;
-  margin-top: -53px;
-  margin-left: 526px;
+
+  @media screen and (min-width: 320px) {
+     width: 12px;
+     margin-top: 36px;
+    margin-left: -38px;
+      
+      }
+      
+      @media screen and (min-width: 768px) {
+        
+      }
+      
+      @media screen and (min-width: 1280px) {
+        margin-top: -53px;
+        margin-left: 526px;
+        width: 15px;
+      }
 }
