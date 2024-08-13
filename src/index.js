@@ -26,3 +26,4 @@ const refs = {
       onCloseModal();
     }
   }
+

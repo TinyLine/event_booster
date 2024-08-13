@@ -13,12 +13,13 @@
   }
 
   @media screen and (min-width: 768px) {
-      
+    width: 190px;
+    height: 160px;
   }
     
   @media screen and (min-width: 1280px) {
-      width: 300px;
-      height: 300px;
+    width: 300px;
+    height: 260px;
   }
 }
 
@@ -30,7 +31,8 @@
   }
 
   @media screen and (min-width: 768px) {
-      
+    width: 16.582px;
+    height: 19.82px;
   }
     
   @media screen and (min-width: 1280px) {
@@ -51,7 +53,8 @@
      }
    
      @media screen and (min-width: 768px) {
-         
+      margin-top: 125px;
+      margin-left: 0px;
      }
        
      @media screen and (min-width: 1280px) {
@@ -73,7 +76,8 @@
    }
  
    @media screen and (min-width: 768px) {
-       
+    margin-top: 155px;
+    margin-left: 0px;
    }
      
    @media screen and (min-width: 1280px) {
@@ -98,26 +102,23 @@ margin-left: -9px;
 }
 
 @media screen and (min-width: 768px) {
+  font-size: 30px;
+  width: 400px;
+  margin-left: auto;
+  line-height: normal;
   
+
 }
 
 @media screen and (min-width: 1280px) {
   font-size: 50px;
-  line-height: 60.95px;
   margin-top: -70px;
   margin-left: auto;
+  line-height: 60.95px;
+  width: unset;
 }
 }
 
-
-input::placeholder {
-color: var(--secondary-input-color);
-font-size: 16px;
-font-weight: 400;
-line-height: 19.5px;
-padding-left: 30px;
-
-}
 
 .search{
   border: none;
@@ -152,7 +153,10 @@ padding-left: 30px;
       }
       
       @media screen and (min-width: 768px) {
-        
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        position: static;
       }
       
       @media screen and (min-width: 1280px) {
@@ -163,6 +167,15 @@ padding-left: 30px;
         position: static;
       }
 }
+
+input::placeholder {
+  color: var(--secondary-input-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  padding-left: 30px;
+  
+  }
 
 .hero {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/music-picture.jpg); 
@@ -206,7 +219,8 @@ padding-left: 30px;
       }
       
       @media screen and (min-width: 768px) {
-        
+        margin-left: -98px;
+        width: 15px;
       }
       
       @media screen and (min-width: 1280px) {
@@ -230,7 +244,9 @@ padding-left: 30px;
       }
       
       @media screen and (min-width: 768px) {
-        
+        width: 15px;
+        margin-top: -29px;
+        margin-left: 485px;
       }
       
       @media screen and (min-width: 1280px) {
