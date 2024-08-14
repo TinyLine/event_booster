@@ -27,3 +27,18 @@ const refs = {
     }
   }
 
+  const container = document.querySelector('.container');
+
+  async function cloneItems() {
+      const items = container.querySelectorAll('.item'); // выбираем все элементы с классом .item
+      items.forEach(item => {
+          const clone = item.cloneNode(true); // клонируем элемент
+          container.appendChild(clone); // добавляем его в контейнер
+      });
+  }
+  
+  // Привязываем функцию клонирования к кнопке "Загрузить еще"
+  document.getElementById('loadMoreBtn').addEventListener('click', cloneItems);
+  
+  // Если нужно сразу загрузить больше элементов, можем вызвать функцию сразу
+  cloneItems();
