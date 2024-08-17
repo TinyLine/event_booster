@@ -126,6 +126,7 @@ margin-left: -9px;
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(10px);
 
+  transition: border-color 0.3s ease, transform 0.3s ease;
   @media screen and (min-width: 320px) {
     width: 270px;
     height: 40px;
@@ -145,6 +146,14 @@ margin-left: -9px;
 
       }
 }
+
+.search:focus {
+    border-color: #007bff;
+    transform: scale(1.05);
+    outline: none;
+}
+  
+
 
 .input_place{
   @media screen and (min-width: 320px) {
