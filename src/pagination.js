@@ -1,6 +1,5 @@
 import Handlebars from 'handlebars';
 
-
 const API_KEY = 'EGzZa0Jvwm4AMHpN1AZK1ThqRMyMAp80';
 const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json';
 let offset = 0;
@@ -61,12 +60,12 @@ function displayEvents(events) {
 
 function loadMoreEvents() {
   offset += LIMIT;
-  fetchEvents('New York', offset);
+  fetchEvents('', offset);
 }
 
 document.getElementById('load-more-btn')?.addEventListener('click', loadMoreEvents);
 
-fetchEvents('New York', offset);
+fetchEvents('', offset);
 
 const source = document.getElementById('event-template').innerHTML;
 const template = Handlebars.compile(source);

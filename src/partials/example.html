@@ -91,7 +91,7 @@
 </div>
 
   <main class="container section-position">
-    <div class="item item-1">
+    <div class="item">
         <picture>
             <img class="picture__body" src="./images/euroision.jpg" alt="">
         </picture>
@@ -273,21 +273,33 @@
 
 <script id="event-template" type="text/x-handlebars-template">
   {{#each events}}
-      <div class="item {{itemClass}}">
-          <picture>
-              <img class="picture__body" src="{{image}}" alt="{{name}}">
-          </picture>
-          <h2 class="picture___title">{{name}}</h2>
-          <p class="picture____text">{{date}}</p>
-          <svg class="location-icon-two">
-              <use href="./svg/symbol-defs1.svg#icon-vector-11"></use>
-          </svg>
-          <p class="picture_____text-two">{{venue}}</p>
-      </div>
-  {{/each}}
+  {{#if image}} <!-- Проверка наличия картинки -->
+  <div class="item">
+      <picture>
+          <img class="picture__body" src="{{image}}" alt="{{name}}">
+      </picture>
+      <h2 class="picture___title">{{name}}</h2>
+      <p class="picture____text">{{date}}</p>
+      <svg class="location-icon-two">
+          <use href="./svg/symbol-defs1.svg#icon-vector-11"></use>
+      </svg>
+      <p class="picture_____text-two">{{venue}}</p>
+  </div>
+  {{else}}
+  <!-- Можно добавить сообщение об ошибке или заглушку, если картинки нет -->
+  <div class="item">
+      <h2 class="picture___title">{{name}}</h2>
+      <p class="picture____text">{{date}}</p>
+      <svg class="location-icon-two">
+          <use href="./svg/symbol-defs1.svg#icon-vector-11"></use>
+      </svg>
+      <p class="picture_____text-two">{{venue}}</p>
+  </div>
+  {{/if}}
+{{/each}}
 </script>
 
-<div id="events-container" class="event-container">Loading events...</div>
+<div id="events-container" class="event-container"></div>
 <button id="load-more-btn">Load More Events</button>
 
 </main>

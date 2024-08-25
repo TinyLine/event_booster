@@ -31,11 +31,11 @@
       }
 
       @media screen and (min-width: 768px) {
-        
+        padding: 0 50.5px;
       }
       
       @media screen and (min-width: 1280px) {
-        padding: unset;
+        padding: 0 50.5px;
       }
 }
 
@@ -127,3 +127,13 @@
       }
 }
 
+
+#load-more-btn{
+  position: absolute; /* Абсолютное позиционирование */
+ margin-top: 1500px;
+}
+
+
+.event-container{
+  display: contents;
+}
