@@ -1,57 +1,83 @@
-// const consumerKey = 'EGzZa0Jvwm4AMHpN1AZK1ThqRMyMAp80';
-// const consumerSecret = 'ZGaYZdP9PNrFnF6A';
-// pagination.js
-let accessToken = 'EGzZa0Jvwm4AMHpN1AZK1ThqRMyMAp80'; // Убедитесь, что accessToken правильно установлен
+import Handlebars from 'handlebars';
 
-console.log('Access Token:', accessToken);
 
-async function fetchEvents(page = 0) {
-    try {
-        const response = await fetch(`http://localhost:1234/api/events?page=${page}`, {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${accessToken}`,
-                'Content-Type': 'application/json'
-            }
-        });
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        return data._embedded ? data._embedded.events : [];
-    } catch (error) {
-        console.error('Ошибка получения событий:', error);
-        return [];
-    }
-}
+const API_KEY = 'EGzZa0Jvwm4AMHpN1AZK1ThqRMyMAp80';
+const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json';
+let offset = 0;
+const LIMIT = 4;
 
-document.getElementById('load-more-button').addEventListener('click', async () => {
-    const page = parseInt(document.querySelector('meta[name="current-page"]').content) || 0;
-    const events = await fetchEvents(page);
-    renderEvents(events);
-    document.querySelector('meta[name="current-page"]').content = page + 1;
-});
-
-function renderEvents(events) {
-    const container = document.getElementById('data-container');
-    events.forEach(event => {
-        const eventElement = document.createElement('div');
-        eventElement.className = 'item';
-        eventElement.innerHTML = `
-            <picture>
-                <img class="picture__body" src="${event.imageUrl}" alt="${event.name}">
-            </picture>
-            <h2 class="picture___title">${event.name}</h2>
-            <p class="picture____text">${event.date}</p>
-            <svg class="location-icon">
-                <use href="./svg/symbol-defs1.svg#icon-vector-11"></use>
-            </svg>
-            <p class="picture_____text-two">${event.location}</p>
-        `;
-        container.appendChild(eventElement);
+async function fetchEvents(city, offset) {
+  try {
+    const response = await axios.get(BASE_URL, {
+      params: {
+        apikey: API_KEY,
+        city: city,
+        size: LIMIT,
+        offset: offset,
+      },
     });
+
+    if (response.data?._embedded?.events) {
+      const events = response.data._embedded.events;
+      displayEvents(events);
+    } else {
+      console.error('No events found.');
+      document.getElementById('events-container').textContent = 'No events found.';
+    }
+  } catch (error) {
+    console.error('Error fetching events:', error);
+    document.getElementById('events-container').textContent = 'Failed to load events.';
+  }
 }
 
+function displayEvents(events) {
+  const container = document.getElementById('events-container');
+  if (!events || events.length === 0) {
+    if (offset === 0) {
+      container.textContent = 'No events found.';
+    }
+    return;
+  }
 
-const credentials = Buffer.from('EGzZa0Jvwm4AMHpN1AZK1ThqRMyMAp80:ZGaYZdP9PNrFnF6A').toString('base64');
-console.log(credentials);
+  const transformedEvents = events.map(event => {
+    const imageUrl = event.images.find(img => img.width > 600)?.url || 'default-image.jpg';
+
+    return {
+      name: event.name,
+      date: new Date(event.dates.start.dateTime).toLocaleDateString(),
+      venue: event._embedded.venues[0]?.name || 'Unknown venue',
+      image: imageUrl,
+      icon: './svg/symbol-defs1.svg#icon-vector-11',
+      itemClass: 'item',
+      locationIconClass: 'location-icon',
+    };
+  });
+
+  const source = document.getElementById('event-template').innerHTML;
+  const template = Handlebars.compile(source);
+  const html = template({ events: transformedEvents });
+  container.innerHTML += html;
+}
+
+function loadMoreEvents() {
+  offset += LIMIT;
+  fetchEvents('New York', offset);
+}
+
+document.getElementById('load-more-btn')?.addEventListener('click', loadMoreEvents);
+
+fetchEvents('New York', offset);
+
+const source = document.getElementById('event-template').innerHTML;
+const template = Handlebars.compile(source);
+
+const context = {
+  events: [
+    { image: 'path/to/image1.jpg', name: 'Event 1', date: '2024-09-01', venue: 'Venue 1', itemClass: 'special-item' },
+    // другие события
+  ]
+};
+
+const html = template(context);
+document.getElementById('events-container').innerHTML = html;
+

@@ -1,3 +1,4 @@
+
 <body class="background">
   <header class="container hero">
     <div class="logo_style"></div>
@@ -270,11 +271,28 @@
   <p class="picture_____text-two">VDNH</p>
 </div>
 
-<div id="data-container"></div>
-<button id="load-more-button">Load More</button>
+<script id="event-template" type="text/x-handlebars-template">
+  {{#each events}}
+      <div class="item {{itemClass}}">
+          <picture>
+              <img class="picture__body" src="{{image}}" alt="{{name}}">
+          </picture>
+          <h2 class="picture___title">{{name}}</h2>
+          <p class="picture____text">{{date}}</p>
+          <svg class="location-icon-two">
+              <use href="./svg/symbol-defs1.svg#icon-vector-11"></use>
+          </svg>
+          <p class="picture_____text-two">{{venue}}</p>
+      </div>
+  {{/each}}
+</script>
+
+<div id="events-container" class="event-container">Loading events...</div>
+<button id="load-more-btn">Load More Events</button>
 
 </main>
   <footer class="footer_section container">
       <p class="footer_down_text">© 2021 | All Rights Reserved | Developed with ♥ by GoIT Studen</p>
-  </footer>
+  </footer> 
+     
 </body>
