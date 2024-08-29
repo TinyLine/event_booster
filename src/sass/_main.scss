@@ -26,12 +26,12 @@
 
   @media screen and (min-width: 320px) {
     padding: 0 11.5px;
-    
-      
+
       }
 
       @media screen and (min-width: 768px) {
-        padding: 0 50.5px;
+        padding: 0 30.5px;
+
       }
       
       @media screen and (min-width: 1280px) {
@@ -40,13 +40,13 @@
 }
 
 
+
 .picture__body {
   border-radius: 50px 0px 50px 0px;
 
   @media screen and (min-width: 320px) {
     width: 128px;
     height: 161px;
-    
       
       }
       
@@ -128,9 +128,39 @@
 }
 
 
-#load-more-btn{
-  position: absolute; /* Абсолютное позиционирование */
- margin-top: 1500px;
+#load-more-btn {
+  background: rgba(255, 255, 255, 0.20);
+  border: none;
+  width: 185px;
+  height: 40px;
+  border-radius: 17px;
+  cursor: pointer;
+  margin: 15px 0;
+  margin-right: -835px;
+  color: var(--secondary-input-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  @media screen and (min-width: 320px) {
+    display: none;
+      
+      }
+      
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+      
+      @media screen and (min-width: 1280px) {
+        margin-right: -835px;
+        display: block;
+      }
+}
+
+#load-more-btn:hover {
+  background-color: #ffffff;
+  transform:  scale(1.1);
 }
 
 

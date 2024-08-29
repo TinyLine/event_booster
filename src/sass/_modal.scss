@@ -40,9 +40,6 @@
 }
 
    
-
-
-/* Анимация для модалки */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -65,7 +62,6 @@
     }
 }
 
-/* Стили для фона модалки */
 .modal-backdrop {
     display: none;
     position: fixed;
@@ -82,7 +78,6 @@
     transition: opacity 0.3s ease;
 }
 
-/* Стили для самой модалки */
 .modal {
     background: #FFF2FD;
     padding: 20px;
@@ -109,7 +104,6 @@
     }
 }
 
-/* Кнопка закрытия */
 .modal-close-btn {
     position: absolute;
     top: 10px;
@@ -120,14 +114,12 @@
     cursor: pointer;
 }
 
-/* Показ модалки */
 .show-modal .modal-backdrop {
     display: flex;
     opacity: 1;
     animation: fadeIn 0.3s ease;
 }
 
-/* Скрытие модалки */
 .hide-modal .modal-backdrop {
     display: flex;
     opacity: 0;

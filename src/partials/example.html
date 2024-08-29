@@ -273,29 +273,19 @@
 
 <script id="event-template" type="text/x-handlebars-template">
   {{#each events}}
-  {{#if image}} <!-- Проверка наличия картинки -->
   <div class="item">
+      {{#if image}}
       <picture>
           <img class="picture__body" src="{{image}}" alt="{{name}}">
       </picture>
+      {{/if}}
       <h2 class="picture___title">{{name}}</h2>
       <p class="picture____text">{{date}}</p>
-      <svg class="location-icon-two">
+      <svg class="location-icon">
           <use href="./svg/symbol-defs1.svg#icon-vector-11"></use>
       </svg>
       <p class="picture_____text-two">{{venue}}</p>
   </div>
-  {{else}}
-  <!-- Можно добавить сообщение об ошибке или заглушку, если картинки нет -->
-  <div class="item">
-      <h2 class="picture___title">{{name}}</h2>
-      <p class="picture____text">{{date}}</p>
-      <svg class="location-icon-two">
-          <use href="./svg/symbol-defs1.svg#icon-vector-11"></use>
-      </svg>
-      <p class="picture_____text-two">{{venue}}</p>
-  </div>
-  {{/if}}
 {{/each}}
 </script>
 

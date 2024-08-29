@@ -5,6 +5,7 @@ const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json';
 let offset = 0;
 const LIMIT = 4;
 
+
 async function fetchEvents(city, offset) {
   try {
     const response = await axios.get(BASE_URL, {
@@ -46,9 +47,7 @@ function displayEvents(events) {
       date: new Date(event.dates.start.dateTime).toLocaleDateString(),
       venue: event._embedded.venues[0]?.name || 'Unknown venue',
       image: imageUrl,
-      icon: './svg/symbol-defs1.svg#icon-vector-11',
       itemClass: 'item',
-      locationIconClass: 'location-icon',
     };
   });
 
@@ -63,20 +62,5 @@ function loadMoreEvents() {
   fetchEvents('', offset);
 }
 
-document.getElementById('load-more-btn')?.addEventListener('click', loadMoreEvents);
-
-fetchEvents('', offset);
-
-const source = document.getElementById('event-template').innerHTML;
-const template = Handlebars.compile(source);
-
-const context = {
-  events: [
-    { image: 'path/to/image1.jpg', name: 'Event 1', date: '2024-09-01', venue: 'Venue 1', itemClass: 'special-item' },
-    // другие события
-  ]
-};
-
-const html = template(context);
-document.getElementById('events-container').innerHTML = html;
+document.getElementById('load-more-btn').addEventListener('click', loadMoreEvents);
 
