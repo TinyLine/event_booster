@@ -5,7 +5,6 @@ const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json';
 let offset = 0;
 const LIMIT = 4;
 
-
 async function fetchEvents(city, offset) {
   try {
     const response = await axios.get(BASE_URL, {
@@ -63,4 +62,3 @@ function loadMoreEvents() {
 }
 
 document.getElementById('load-more-btn').addEventListener('click', loadMoreEvents);
-
