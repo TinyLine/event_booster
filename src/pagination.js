@@ -58,7 +58,7 @@ function displayEvents(events) {
 
 function loadMoreEvents() {
   offset += LIMIT;
-  fetchEvents('', offset);
+  fetchEvents('Los Angeles', offset);
 }
 
 document.getElementById('load-more-btn').addEventListener('click', loadMoreEvents);
